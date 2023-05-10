@@ -1,0 +1,418 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 290px;
+    box-sizing: border-box;
+  }
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+body{
+    color: #1a1a1a;
+    font-family: 'Belleza', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+.container{
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+    font-size: 64px;
+    line-height: 82px;
+}
+
+h2{
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 61px;   
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Belleza', sans-serif;
+    min-height: 100px;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.menu__item{
+    display: inline-block;
+}
+
+.menu__item + .menu__item{
+    padding-left: 60px;
+}
+
+.menu__item:nth-last-child(-n+1){
+    padding-left: 4px;
+}
+
+.logo{
+    height: 100px;
+    width: 200px;
+}
+
+.logo-img{
+    height: 100px;
+    width: 200px;
+}
+
+.logo-img_inverted{
+    filter: invert(100%);
+}
+
+.search__bar{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    padding-left: 15px;
+}
+
+.search{
+    background-image: url(images/search-bar.svg);
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 40px;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-family: 'Belleza', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.search__button {
+    background-image: url(images/search.svg);
+    outline: none;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    background-color: transparent;
+}
+
+.search__content{
+    position: absolute;
+    display: block;
+    max-height: 320px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.search__content::-webkit-scrollbar {
+    display: none;
+  }
+
+.search__item{
+    width: 343px;
+    height: 80px;
+    margin-left: 18px;
+    border-color: #1a1a1a;
+    border-style: solid;
+    border-width: 1px;
+    z-index: 999;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search__item_alfaromeo155{
+    background-image: url(images/alfaromeo155/alfaromeo155.jpg);
+}
+
+.search__item_audi-sport-quattro-s1{
+    background-image: url(images/audi-sport-quattro-s1/audi-sport-quattro-s1.jpg);
+}
+.search__item_audi-v8-quattro{
+    background-image: url(images/audi-v8-quattro/audi-v8-quattro.jpg);
+}
+.search__item_bmw-e30{
+    background-image: url(images/bmw-e30/bmw-e30.jpg);
+}
+.search__item_bmw-m3-gtr{
+    background-image: url(images/bmw-m3-gtr/bmw-m3-gtr.jpg);
+}
+.search__item_detomaso-pantera{
+    background-image: url(images/detomaso-pantera/detomaso-pantera.jpg);
+}
+.search__item_dodge-viper{
+    background-image: url(images/dodge-viper/dodge-viper.jpg);
+}
+.search__item_ferrari308{
+    background-image: url(images/ferrari308/ferrari308.jpg);
+}
+.search__item_ferrari-f40{
+    background-image: url(images/ferrari-f40/ferrari-f40.jpg);
+}
+.search__item_ford-gt40{
+    background-image: url(images/ford-gt40/ford-gt40.jpg);
+}
+.search__item_ford-rs200{
+    background-image: url(images/ford-rs200/ford-rs200.jpg);
+}
+.search__item_lancia037{
+    background-image: url(images/lancia037/lancia037.jpg);
+}
+.search__item_lancia-delta-s4{
+    background-image: url(images/lancia-delta-s4/lancia-delta-s4.jpg);
+}
+.search__item_lancia-stratos{
+    background-image: url(images/lancia-stratos/lancia-stratos.jpg);
+}
+.search__item_mazda787b{
+    background-image: url(images/mazda787b/mazda787b.jpg);
+}
+.search__item_mazda-rx-7{
+    background-image: url(images/mazda-rx-7/mazda-rx-7.jpg);
+}
+.search__item_mclaren-f1{
+    background-image: url(images/mclaren-f1/mclaren-f1.jpg);
+}
+.search__item_mercedes-benz-e190{
+    background-image: url(images/mercedes-benz-e190/mercedes-benz-e190.jpg);
+}
+.search__item_mitsubishi-lancer-evo{
+    background-image: url(images/mitsubishi-lancer-evo/mitsubishi-lancer-evo.jpg);
+}
+.search__item_nissan-primera{
+    background-image: url(images/nissan-primera/nissan-primera.jpg);
+}
+.search__item_nissan-skyline{
+    background-image: url(images/nissan-skyline/nissan-skyline.jpg);
+}
+.search__item_peugeot205{
+    background-image: url(images/peugeot205/peugeot205.jpg);
+}
+.search__item_porsche-917{
+    background-image: url(images/porsche-917/porsche-917.jpg);
+}
+.search__item_porsche924{
+    background-image: url(images/porsche924/porsche924.jpg);
+}
+.search__item_porsche935{
+    background-image: url(images/porsche935/porsche935.jpg);
+}
+.search__item_porsche956c{
+    background-image: url(images/porsche956c/porsche956c.jpg);
+}
+.search__item_porsche959{
+    background-image: url(images/porsche959/porsche959.jpg);
+}
+.search__item_renaulsport-laguna{
+    background-image: url(images/renaulsport-laguna/renaulsport-laguna.jpg);
+}
+.search__item_subaru-impreza{
+    background-image: url(images/subaru-impreza/subaru-impreza.jpg);
+}
+.search__item_volvo850{
+    background-image: url(images/volvo850/volvo850.jpg);
+}
+
+
+.search__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+
+.search__content-text{
+    color: white;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.search__item_hidden{
+    display: none;
+}
+
+.bar__bg{
+    background-color: #1a1a1a;
+    height: 240px;
+}
+
+.bar__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    
+}
+
+.bar__item{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 33.33%;
+}
+
+.bar__number{
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 163px;
+}
+
+.bar__text{
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.bar__flag{
+    width: 185px;
+}
+
+.footer-outer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    height: 270px;
+}
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 270px;
+}
+
+.footer__item{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer__copyright{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__socials{
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 1230px){
+    .search{
+        display: none;
+    }
+}
+
+@media (max-width: 840px){
+    .menu__link-socials{
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .bar__number,
+    .bar__text{
+        display: none;
+    }
+}
+
+@media (max-width: 760px){
+    .menu__item{
+        display: block;
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 500px){
+    .logo-img_inverted{
+        display: none;
+    }
+    .footer__copyright{
+        display: none;
+    }
+    .footer__item{
+        position: absolute;
+    }
+    .footer-inner{
+        justify-content: center;
+        position: relative;
+    }
+}
+
+@media (max-width: 400px){
+    .logo{
+        display: none;
+    }
+    .menu__list{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .header-inner{
+        justify-content: center;
+    }
+    .menu__item + .menu__item{
+        padding-left: 0;
+    }
+    .menu__item{
+        padding-left: 0;
+    }
+}

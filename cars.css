@@ -1,0 +1,60 @@
+.caption__box{
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.carousel-inner{
+    display: flex;
+}
+
+.carousel__slide{
+    height: 313px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    gap: 80px;
+    margin-right: 10px;
+}
+
+.carousel__slide-img {
+    width: 550px;
+    height: 313px;
+    object-fit: cover;
+}
+
+.content__text{
+    font-size: 26px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.carousel__prev-btn,
+.carousel__next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel__prev-btn {
+    left: 0;
+  }
+  
+  .carousel__next-btn {
+    right: 0;
+  }
+
+.content__caption{
+    margin: 20px 0 10px 0;
+}
+
+.content__text{
+    margin-bottom: 20px;
+}
+

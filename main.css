@@ -1,0 +1,223 @@
+.banner__bg{
+    background-image: url(images/banner-bg1.jpg);
+    min-height: 480px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner__content{
+    min-height: 480px;
+    display: flex;
+    padding: 80px 250px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner__text{
+    display: flex;
+    flex-direction: column;
+    text-align:  center;
+    justify-content: center;
+    color: white;
+}
+
+.banner__text-upper{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 54px;
+}
+
+.banner__text-lower{ 
+    font-size: 28px;
+    line-height: 32px;
+    padding-top: 15px;   
+}
+
+.showcase__text-upper{
+    margin-top: 25px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 54px;
+}
+
+.showcase__box{
+    position: relative;
+    min-height: 830px;
+}
+
+.showcase__box-left{
+    min-height: 830px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 710px;
+    position: absolute;
+    left: 0;
+}
+
+.showcase__box-right{
+    min-height: 830px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 710px;
+    position: absolute; 
+    right: 0;
+    justify-content: flex-end;
+}
+
+.showcase__car-img{
+    width: 525px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.showcase__item{
+    display: flex;
+}
+
+.showcase__info{
+    height: 330px;
+    width: 0;
+    background-color: #1a1a1a;
+    text-align: justify;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.5s;
+}
+
+.showcase__info-text{
+    color: white;
+    z-index: 999;
+}
+
+.button__discover{
+    width: 165px;
+    height: 60px;
+    background-color: white;
+    color: #1a1a1a;
+    padding: 12px 12px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 36px;
+    z-index: 999;
+}
+
+.button__discover_negative{
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.showcase__name{
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.showcase__car-flag{
+    width: 61px;
+    height: 41px;
+    position: absolute;
+    left: 0;
+    top: 31px;
+}
+
+.showcase__car{
+    position: relative;
+}
+
+
+.showcase__item:hover .showcase__info,
+.showcase__info:hover {
+    opacity: 1;
+    width: 185px;
+  }
+
+.showcase__text-lower{
+    text-align: center;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 51px;
+    padding: 0 15%;
+}
+
+.redirect__content{
+    min-height: 204px;
+    display: flex;
+    margin: 75px 0;
+    justify-content: space-between;
+
+}
+
+.redirect__text{
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+    width: 373px;
+}
+
+.redirect__img{
+    background-image: url(images/redirect.jpg);
+    background-repeat: no-repeat;
+    height: 204px;
+    width: 835px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+@media (max-width: 1300px){
+    .showcase__box-left .showcase__item:last-child,
+    .showcase__box-right .showcase__item:first-child {
+      visibility: hidden;
+    }
+    .redirect__img{
+        width: 365px;
+    }
+    .showcase__info{
+        opacity: 1;
+        width: 185px;
+    }
+      
+}
+
+@media (max-width: 800px){
+    .showcase,
+    .bar {
+        display: none;
+    }
+    .redirect__content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .redirect__text{
+        width: auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px){
+    .banner__content{
+        padding: 0;
+    }
+}
