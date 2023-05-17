@@ -19,6 +19,15 @@ a{
     color: inherit;
 }
 
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+textarea {
+    resize: none;
+}
+
 ul,
 li{
     margin: 0;
@@ -73,6 +82,11 @@ h2{
 
 .menu__item{
     display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.menu__item:hover{
+    color: #b80f0a
 }
 
 .menu__item + .menu__item{
@@ -81,6 +95,10 @@ h2{
 
 .menu__item:nth-last-child(-n+1){
     padding-left: 4px;
+}
+
+.menu__link-socials:hover{
+    filter: invert(20%) sepia(100%) saturate(3708%) hue-rotate(359deg) brightness(78%) contrast(91%);
 }
 
 .logo{
@@ -125,20 +143,10 @@ h2{
     line-height: 23px;
 }
 
-.search__button {
-    background-image: url(images/search.svg);
-    outline: none;
-    border: 0;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    background-color: transparent;
-}
-
 .search__content{
     position: absolute;
     display: block;
-    max-height: 320px;
+    max-height: 360px;
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -149,7 +157,7 @@ h2{
   }
 
 .search__item{
-    width: 343px;
+    width: 365px;
     height: 80px;
     margin-left: 18px;
     border-color: #1a1a1a;
@@ -350,6 +358,26 @@ h2{
 .footer__socials{
     display: flex;
     gap: 20px;
+}
+
+.footer__menu-link,
+.mail{
+    transition: color 0.2s ease;
+}
+
+.footer__menu-link:hover,
+.mail:hover{
+    color: #b80f0a;
+}
+
+.footer__facebook-img,
+.footer__instagram-img{
+    transition: filter 0.2s ease;
+}
+
+.footer__facebook-img:hover,
+.footer__instagram-img:hover{
+    filter: invert(100%);
 }
 
 @media (max-width: 1230px){

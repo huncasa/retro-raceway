@@ -1,0 +1,38 @@
+.main-inner{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.content__text{
+    font-size: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form__item{
+    border: solid #1a1a1a;
+    border-width: 2px;
+    color: #1a1a1a;
+    font-family: 'Belleza', sans-serif;
+    font-size: 20px;
+}
+
+.form__item_button{
+    background-color: white;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.form__item_button:hover{
+    background-color: #1a1a1a;
+    color: white;
+    cursor: pointer;
+}

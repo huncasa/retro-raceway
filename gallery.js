@@ -1,61 +1,49 @@
-function getDirectories(path) {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", path, false);
-  xhr.send();
-  let result = [];
-  let parser = new DOMParser();
-  let doc = parser.parseFromString(xhr.responseText, "text/html");
-  let dirs = doc.querySelectorAll("a[href*='//']");
-  for (let i = 0; i < dirs.length; i++) {
-    let dirName = dirs[i].href.replace(/.*\//g, "");
-    if (dirName != "..") {
-      result.push(dirName);
+$(document).ready(function() {
+  const gallery = $('.gallery');
+
+  function addImage(imgSrc) {
+    const img = $('<a>').attr('href', imgSrc).append($('<img>').attr('src', imgSrc).addClass('gallery-image'));
+    img.attr('data-lightbox', 'gallery');
+    gallery.append(img);
+  }
+  
+  const folders = [
+    'alfaromeo155',
+    'audi-sport-quattro-s1',
+    'audi-v8-quattro',
+    'bmw-e30',
+    'bmw-m3-gtr',
+    'detomaso-pantera',
+    'dodge-viper',
+    'ferrari308',
+    'ferrari-f40',
+    'ford-gt40',
+    'ford-rs200',
+    'lancia037',
+    'lancia-delta-s4',
+    'lancia-stratos',
+    'mazda787b',
+    'mazda-rx-7',
+    'mclaren-f1',
+    'mercedes-benz-e190',
+    'mitsubishi-lancer-evo',
+    'nissan-primera',
+    'nissan-skyline',
+    'peugeot205',
+    'porsche-917',
+    'porsche924',
+    'porsche935',
+    'porsche956c',
+    'porsche959',
+    'renaulsport-laguna',
+    'subaru-impreza',
+    'volvo850'
+  ]
+  
+  folders.forEach(folder => {
+    for (let i = 1; i <= 14; i++) {
+      const imgSrc = `images/${folder}/${folder}-${i}.jpg`;
+      addImage(imgSrc);
     }
-  }
-  return result;
-}
-
-function getFiles(path) {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", path, false);
-  xhr.send();
-  let result = [];
-  let parser = new DOMParser();
-  let doc = parser.parseFromString(xhr.responseText, "text/html");
-  let files = doc.querySelectorAll("a[href*='.jpg'],a[href*='.jpeg'],a[href*='.png'],a[href*='.gif']");
-  for (let i = 0; i < files.length; i++) {
-    let fileName = files[i].href.replace(/.*\//g, "");
-    result.push({
-      name: fileName,
-      path: path + fileName,
-      alt: fileName.replace(/\.[^/.]+$/, "")
-    });
-  }
-  return result;
-}
-
-function loadGallery() {
-  let galleries = document.getElementsByClassName("gallery");
-  for (let i = 0; i < galleries.length; i++) {
-    let gallery = galleries[i];
-    let galleryPath = gallery.getAttribute("data-path");
-    let directories = getDirectories(galleryPath);
-    let files = [];
-    for (let j = 0; j < directories.length; j++) {
-      let folderPath = galleryPath + directories[j] + "/";
-      files = files.concat(getFiles(folderPath));
-    }
-    gallery.innerHTML = generateGalleryHTML(files);
-  }
-}
-
-function generateGalleryHTML(files) {
-  let html = "";
-  for (let i = 0; i < files.length; i++) {
-    let file = files[i];
-    html += "<div class='gallery-item'><img src='" + file.path + "' alt='" + file.alt + "'></div>";
-  }
-  return html;
-}
-
-document.addEventListener("DOMContentLoaded", loadGallery);
+  });
+});
