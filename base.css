@@ -97,6 +97,10 @@ h2{
     padding-left: 4px;
 }
 
+.menu__link-socials{
+    transition: filter 0.2s ease;
+}
+
 .menu__link-socials:hover{
     filter: invert(20%) sepia(100%) saturate(3708%) hue-rotate(359deg) brightness(78%) contrast(91%);
 }
@@ -175,7 +179,6 @@ h2{
 .search__item_alfaromeo155{
     background-image: url(images/alfaromeo155/alfaromeo155.jpg);
 }
-
 .search__item_audi-sport-quattro-s1{
     background-image: url(images/audi-sport-quattro-s1/audi-sport-quattro-s1.jpg);
 }

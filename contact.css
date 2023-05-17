@@ -36,3 +36,9 @@
     color: white;
     cursor: pointer;
 }
+
+@media(max-width: 440px){
+    .main-inner{
+        flex-direction: column;
+    }
+}
